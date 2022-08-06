@@ -72,10 +72,7 @@
 	controls autoplay loop
 	src="audio/sunda.mp3">
 </audio> -->
-<audio autoplay loop controls hidden>
-    <source src="audio/sunda.mp3" type="audio/mp3">
-    Browsermu tidak mendukung tag audio, upgrade donk!
-</audio>
+
 
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
@@ -124,7 +121,7 @@
 							<h1>Joefrey &amp; Sheila</h1>
 							<h2>We Are Getting Married</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+							<p><a href="#" onclick="play()" class="btn btn-default btn-sm">Save the date</a></p>
 						</div>
 					</div>
 				</div>
@@ -627,7 +624,10 @@
 
 	<script>
     var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
-
+    function play(){
+	var audio = new Audio('audio/sunda.mp3');
+     audio.play();
+	}
 
     // default example
     simplyCountdown('.simply-countdown-one', {
